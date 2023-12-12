@@ -19,24 +19,14 @@ import web3 from "../../public/web3.png";
 import web4 from "../../public/web4.png";
 
 export default function Home() {
-  const storedDarkMode = localStorage.getItem("darkMode");
-  const [darkMode, setDarkMode] = useState(storedDarkMode === "true");
-  useEffect(() => {
-    localStorage.setItem("darkMode", darkMode);
-  }, [darkMode]);
+  
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div >
       <section className="bg-white px-4 md:px-8 lg:px-12 xl:px-24 dark:bg-gray-900">
         <section className="min-h-screen">
           <nav className="py-4 mb-6 flex justify-between dark:text-white">
             <h1 className="font-burtons text-xl">JahidPortfolio</h1>
             <ul className="flex items-center">
-              <li>
-                <BsFillMoonStarsFill
-                  onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-2xl"
-                />
-              </li>
               <li>
                 <a
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 border-none rounded-md ml-4 md:ml-8"
@@ -145,7 +135,7 @@ export default function Home() {
               />
               <h3 className="text-lg font-medium pt-8 pb-2 ">Familiar</h3>
               <p className="py-2">
-                If you're seeking feedback for your current project, I can
+                If you are seeking feedback for your current project, I can
                 provide valuable tips and tricks to elevate its performance and
                 impact.
               </p>
@@ -165,7 +155,7 @@ export default function Home() {
               been defined by a series of engaging projects that showcase my
               expertise in crafting visually stunning and user-centric web
               applications. Collaborating with agencies and providing consulting
-              services to startups, I've had the privilege of contributing to
+              services to startups, I have the privilege of contributing to
               cutting-edge solutions that prioritize seamless user experiences.
               These projects not only highlight my proficiency in HTML, CSS, and
               JavaScript but also underscore my commitment to staying at the
